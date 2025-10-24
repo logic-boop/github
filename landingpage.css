@@ -1,4 +1,7 @@
-*{
+@import url('https://fonts.cdnfonts.com/css/mona-sans');
+
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,7 +9,7 @@
 }
 
 /* ------ The Header ------ */
-.headercontainer{
+.headercontainer {
     /* border: 2px solid red; */
     display: flex;
     justify-content: space-between;
@@ -14,7 +17,8 @@
     background-color: #040642;
     padding: 15px;
 }
-.leftside{
+
+.leftside {
     /* border: 2px solid white; */
     display: flex;
     justify-content: space-around;
@@ -23,28 +27,47 @@
     align-items: center;
     margin-left: 15px;
 }
-.logo img{
+
+.logo img {
     /* border: 2px solid red; */
     padding: 2px;
     width: 35px;
     filter: brightness(2) invert(1);
-    
+
 }
-.menucontainer .menu{
+
+.leftside .bars {
+    border: 2px solid crimson;
+    color: white;
+    font-size: 20px;
+    display: none;
+}
+
+.middlelogo img {
+    border: 2px solid red;
+    padding: 2px;
+    width: 35px;
+    filter: brightness(2) invert(1);
+    display: none;
+}
+
+.menucontainer .menu {
     /* border: 2px solid pink; */
     display: flex;
     padding: 2px;
     gap: 1em;
     color: rgb(211, 208, 208);
-    font-size: 18px;
+    font-size: 16px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 100;
+    font-weight: 500;
 }
-.menucontainer .menu a{
+
+.menucontainer .menu a {
     color: rgb(211, 208, 208);
     text-decoration: none;
 }
-.rightside{
+
+.rightside {
     /* border: 2px solid green; */
     display: flex;
     padding: 5px;
@@ -55,23 +78,48 @@
     font-size: 17px;
     align-items: center;
 }
-.rightside .search{
-    border: 1px solid rgb(185, 183, 183);;
+
+.rightside .search {
+    border: 1px solid rgb(185, 183, 183);
     padding: 5px;
     width: 360px;
     height: 32px;
     color: rgb(216, 215, 215);
     text-decoration: none;
     font-size: 16px;
-    background-color: #161b57;
+    background-color: #272E49;
     opacity: .7;
     border-radius: 6px;
 }
-.sign a{
+
+.rightside .fa-bars {
+    border: 2px solid crimson;
+    color: white;
+    font-size: 20px;
+    display: none;
+}
+
+.rightside .srch {
+    border: 1px solid rgb(156, 152, 152);
+    color: rgb(238, 236, 236);
+    font-size: 17px;
+    padding: 3px;
+    background-color: #272E49;
+    border-radius: 5px;
+    display: none;
+}
+
+.sign a {
     color: white;
     text-decoration: none;
 }
-.signup a{
+
+.sign {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+}
+
+.signup a {
     border: 1px solid rgb(211, 208, 208);
     padding: 5px;
     padding-left: 10px;
@@ -79,45 +127,738 @@
     border-radius: 5px;
 }
 
-/* dropdown container */
-.container1{
-    border: 2px solid crimson;
+/* ------ Media Query for Header ------ */
+@media(max-width:1345px) {
+    .rightside .search {
+        display: none;
+    }
+
+    .rightside .srch {
+        display: block;
+    }
+
+    .rightside {
+        gap: 2em;
+    }
+}
+
+@media(max-width:1067px) {
+    .menucontainer {
+        display: none;
+    }
+
+    .leftside .logo {
+        display: none;
+    }
+
+    .rightside .srch {
+        display: none;
+    }
+
+    .signup {
+        display: none;
+    }
+
+    .leftside .bars {
+        display: block;
+        border: none;
+        font-size: 25px;
+    }
+
+    .middlelogo img {
+        display: block;
+        border: none;
+    }
+
+    .signin {
+        border: 1px solid rgb(211, 208, 208);
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 5px;
+    }
+}
+
+@media(max-width:894px) {
+    .leftside .bars {
+        font-size: 20px;
+    }
+
+    .middlelogo img {
+        width: 30px;
+    }
+
+    .rightside .signin {
+        font-size: 14px;
+    }
+}
+
+@media(max-width:626px) {
+    .leftside .bars {
+        font-size: 18px;
+    }
+
+    .middlelogo img {
+        width: 27px;
+    }
+
+    .rightside .signin {
+        font-size: 13px;
+    }
+}
+
+@media(max-width:400px) {
+    .leftside .bars {
+        font-size: 17px;
+    }
+
+    .middlelogo img {
+        width: 26px;
+    }
+
+    .rightside .signin {
+        font-size: 12px;
+    }
+}
+
+
+/* Platform dropdown container */
+.menu1 {
+    position: relative;
+}
+
+.container1 {
+    /* border: 2px solid crimson; */
     background-color: white;
-    padding: 5px;
-    height: 100vh;
+    padding-top: 15px;
+    height: 90vh;
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    z-index: 2;
 }
-.parent{
-    border: 2px solid yellow;
+
+.parent {
+    /* border: 2px solid yellow; */
     display: flex;
-    gap: 2em;
 }
-.side{
-    border: 2px solid white;
+
+.menu1:hover .container1 {
+    display: block;
+}
+
+.side {
+    /* border: 2px solid black; */
     padding: 5px;
-    width: 350px;
+    width: 320px;
 }
-.side a{
+
+.side a {
     display: flex;
     align-items: center;
-    gap: .5em;
 }
-.side h1{
-    font-size: 18px;
+
+.side a h1:hover {
+    color: #0969DA;
+}
+
+.side a p:hover {
+    color: #0969DA;
+}
+
+.side h1 {
+    font-size: 17px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 5px;
-    color: black;
+    color: #1F2328;
+    font-weight: 700;
 }
-.side p{
+
+.side p {
     font-size: 15px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 5px;
-    color: black;
+    color: #656E78;
+    font-weight: 400;
 }
 
-.container1 .view .vw{
-    border: 2px solid red;
-    color: black;
+.item {
+    /* border: 2px solid crimson; */
+}
+
+.item h1:hover {
+    color: #0969DA;
+}
+
+.item p:hover {
+    color: #0969DA;
+}
+
+.right {
+    border-left: .5px solid #D1D9E0;
+    padding-left: 15px;
+}
+
+.vw p {
+    /* border: 2px solid red; */
+    color: #656E78;
     background-color: #EAEEF2;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.vw p:hover {
+    color: #0969DA;
+}
+
+/* Solution dropdown container */
+.menu2 {
+    /* border: 2px solid green; */
+    position: relative;
+}
+
+.container2 {
+    /* border: 2px solid crimson; */
+    background-color: white;
+    padding-top: 15px;
+    height: 60vh;
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    z-index: 2;
+}
+
+.menu2:hover .container2 {
+    display: block;
+}
+
+.parent2 {
+    /* border: 2px solid yellow; */
+    display: flex;
+}
+
+.side2 {
+    /* border: 2px solid black; */
+    padding: 5px;
+    width: 230px;
+    border-left: .5px solid #D1D9E0;
+    padding-left: 15px;
+}
+
+.side2 h1 {
+    /* border: 2px solid red; */
+    font-size: 17px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 10px;
+    color: #1F2328;
+    font-weight: 700;
+}
+
+.side2 p {
+    /* border: 2px solid red; */
+    font-size: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 10px;
+    color: #656E78;
+    font-weight: 400;
+}
+
+.side2 a p:hover {
+    color: #0969DA;
+}
+
+.vw2 p {
+    /* border: 2px solid red; */
+    color: #656E78;
+    background-color: #EAEEF2;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+/* Resources dropdown container */
+.menu3 {
+    /* border: 2px solid green; */
+    position: relative;
+}
+
+.container3 {
+    /* border: 2px solid crimson; */
+    background-color: white;
+    padding-top: 15px;
+    height: 55vh;
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    z-index: 2;
+}
+
+.menu3:hover .container3 {
+    display: block;
+}
+
+.parent3 {
+    /* border: 2px solid yellow; */
+    display: flex;
+}
+
+.side3 {
+    /* border: 2px solid black; */
+    padding: 5px;
+    width: 200px;
+    border-left: .5px solid #D1D9E0;
+    padding-left: 15px;
+}
+
+.side3 h1 {
+    /* border: 2px solid red; */
+    font-size: 17px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 10px;
+    color: #1F2328;
+    font-weight: 700;
+}
+
+.side3 p {
+    /* border: 2px solid red; */
+    font-size: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 10px;
+    color: #656E78;
+    font-weight: 400;
+}
+
+.side3 a p:hover {
+    color: #0969DA;
+}
+
+/* Open Source dropdown container */
+.menu4 {
+    /* border: 2px solid green; */
+    position: relative;
+}
+
+.container4 {
+    border: 2px solid crimson;
+    background-color: white;
+    padding: 20px;
+    height: 55vh;
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    z-index: 2;
+}
+
+.menu4:hover .container4 {
+    /* display: block; */
+}
+
+.container4 h1 {
+    /* border: 2px solid red; */
+    font-size: 17px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 2px;
+    color: #1F2328;
+    font-weight: 700;
+}
+
+.container4 p {
+    /* border: 2px solid red; */
+    font-size: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 2px;
+    color: #656E78;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.container4 a p:hover {
+    color: #0969DA;
+}
+
+.cont {
+    border: 2px solid #D1D9E0;
+    border-right: none;
+    border-left: none;
+}
+
+.git {
+    border-top: none;
+}
+
+.readme {
+    border-top: none;
+}
+
+.same:hover {
+    color: #0969DA;
+}
+
+
+/* ------ Hero section ------ */
+.herosect {
+    border: 2px solid red;
+    height: 180.5vh;
+    background-image: linear-gradient(180deg, #070941, #051a46, #416A99);
+    border: none;
+}
+
+.herocontainer .text {
+    text-align: center;
+}
+
+.text h1 {
+    color: white;
+    font-family: 'Mona Sans', sans-serif;
+    font-size: 68px;
+    font-weight: bolder;
+    letter-spacing: -1px;
+    padding: 15px;
+}
+
+.text p {
+    color: white;
+    font-family: 'Mona Sans', sans-serif;
+    font-size: 20px;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.herocontainer .box {
+    padding: 10px;
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+    gap: .5em;
+    align-items: center;
+}
+
+.input {
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+    width: 450px;
+    background-color: white;
+}
+
+.input input {
+    border: 2px solid white;
+    padding: 13px;
+    border-radius: 10px;
+    width: 262px;
+    font-size: 18px;
+    font-family: ;
+}
+
+.input button {
+    border: 2px solid rgb(26, 127, 53);
+    padding: 14px;
+    border-radius: 10px;
+    width: 180px;
+    background-color: rgb(26, 127, 53);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.input button:hover {
+    background-color: #116329;
+}
+
+.box a {
+    border: 2px solid white;
+    padding: 16px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    background-color: #181B3A;
+    width: 200px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.box a:hover {
+    border: 2px solid #616378;
+}
+
+.herosect .vid {
+    /* border: 2px solid white; */
+    /* padding: 10px; */
+    /* padding-left: 70px; */
+    border-radius: 20px;
+    width: 75%;
+    margin: auto;
+}
+
+.vid video {
+    border: 20px solid #7C71C9;
+    border-radius: 15px;
+    border-bottom: none;
+}
+
+/* --- media query for herosection --- */
+@media(max-width:1355px) {
+    .vid video {
+        width: 1000px;
+    }
+}
+
+@media(max-width:1347px) {
+    .vid video {
+        width: 700px;
+    }
+
+    .herosect .vid {
+        display: none;
+    }
+
+    .text h1 {
+        font-size: 65px;
+    }
+
+    .herosect {
+        height: 80vh;
+    }
+}
+
+@media(max-width:769px) {
+    .text h1 {
+        font-size: 50px;
+    }
+
+    .text p {
+        font-size: 17px;
+    }
+}
+
+@media(max-width:687px) {
+    .herocontainer .box {
+        flex-wrap: wrap;
+    }
+}
+
+@media(max-width:579px) {
+    .text h1 {
+        font-size: 45px;
+    }
+
+    .text p {
+        font-size: 16px;
+    }
+}
+
+@media(max-width:515px) {
+    .text h1 {
+        font-size: 40px;
+    }
+
+    .text p {
+        font-size: 14px;
+    }
+}
+
+@media(max-width:508px) {
+    .text h1 {
+        font-size: 39px;
+    }
+
+    .text p {
+        font-size: 14px;
+    }
+}
+
+@media(max-width:496px) {
+    .text h1 {
+        font-size: 35px;
+    }
+
+    .text p {
+        font-size: 12px;
+    }
+}
+
+@media(max-width:479px) {
+    .input button {
+        width: 445px;
+    }
+}
+
+@media(max-width:474px) {
+    .input {
+        width: 395px;
+    }
+
+    .input button {
+        width: 390px;
+    }
+    .box a {
+    width: 395px;
+}
+}
+@media(max-width:448px) {
+     .herosect{
+        height: 99vh;
+     }
+}
+@media(max-width:445px) {
+     .text h1{
+        font-size: 40px;
+     }
+}
+@media(max-width:424px) {
+     .herosect{
+        height: 105vh;
+     }
+     .text h1{
+        font-size: 38px;
+     }
+     .input {
+        width: 360px;
+    }
+
+    .input button {
+        width: 355px;
+    }
+    .box a {
+    width: 360px;
+}
+}
+@media(max-width:403px) {
+     .text h1{
+        font-size: 40px;
+     }
+     .text p{
+        font-size: 9px;
+     }
+     .input {
+        width: 330px;
+    }
+
+    .input button {
+        width: 325px;
+    }
+    .box a {
+    width: 330px;
+}
+}
+@media(max-width:375px) {
+     .text h1{
+        font-size: 35px;
+     }
+     .text p{
+        font-size: 11px;
+     }
+     .input {
+        width: 310px;
+    }
+
+    .input button {
+        width: 305px;
+    }
+    .box a {
+    width: 310px;
+}
+}
+@media(max-width:373px){
+    .text h1{
+        font-size: 32px;
+    }
+}
+@media(max-width:343px) {
+     .text h1{
+        font-size: 29px;
+     }
+     .text p{
+        font-size: 10px;
+     }
+     .input {
+        width: 280px;
+    }
+
+    .input button {
+        width: 275px;
+    }
+    .box a {
+    width: 280px;
+}
+}
+
+
+
+
+
+
+/* ------ Another Section ------ */
+.wrapper {
+    border: 2px solid white;
+    height: 70vh;
+    background-color: #0C0F1D;
+    padding: 5px;
+}
+
+.wrapper .btns {
+    border: .1px solid rgb(88, 86, 86);
+    display: flex;
+    justify-content: center;
+    gap: .2em;
+    width: 52%;
+    margin: auto;
+    margin-top: 25px;
+    padding: 9px;
+    border-radius: 35px;
+}
+
+.btns .btn {
+    border: 2px solid #0C0F1D;
+    width: 132px;
+    padding: 10px;
+    background-color: #0C0F1D;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.btns .btn1 {
+    border: .5px solid rgb(180, 178, 178);
+    border-radius: 35px;
+    background-image: linear-gradient(180deg, #27293A, #1F212F);
+}
+.wrapper p{
+    /* border: 2px solid white; */
+    color: #9e9ea0;
+    font-family: 'Mona Sans', sans-serif;
+    font-weight: 900;
+    padding: 5px;
+    padding-top: 25px;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: .8px;
+    margin-bottom: 10%;
+}
+.marquee{
+    border: 2px solid white;
+}
+.par{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 5px;
+    /* margin-top: 10%; */
+}
+.par .marq{
+    border: 2px solid yellow;
+    color: white;
     padding: 5px;
 }
