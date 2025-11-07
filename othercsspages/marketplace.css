@@ -943,38 +943,44 @@
 }
 
 /* ------ Footer ------ */
-.sect_eleven{
+.sect_eleven {
     display: flex;
     justify-content: space-around;
     padding-top: 60px;
     background-color: #0D1117;
     height: 90vh;
 }
-.col_1{
+
+.col_1 {
     display: flex;
     flex-direction: column;
     gap: 2em;
 }
-.logotext{
+
+.logotext {
     display: flex;
     align-items: center;
     gap: .3em;
 }
-.logotext img{
+
+.logotext img {
     filter: brightness(0) invert(1);
     width: 30px;
 }
-.logotext h2{
+
+.logotext h2 {
     font-size: 30px;
     font-family: sans-serif;
     color: #F0F6FC;
 }
-.col_1 p{
+
+.col_1 p {
     font-family: sans-serif;
     font-weight: 300;
     color: #8F969F;
 }
-.col_1 .sub{
+
+.col_1 .sub {
     border: 1px solid #464a4e;
     color: #F0F6FC;
     font-weight: 600;
@@ -986,96 +992,114 @@
     border-radius: 5px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-.col_1 .sub:hover{
+
+.col_1 .sub:hover {
     border: 1px solid #F0F6FC;
     background-color: none;
 }
-.col{
+
+.col {
     /* border: 2px solid cyan; */
     padding: 10px;
 }
-.col ul{
+
+.col ul {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: flex;
     flex-direction: column;
     gap: 1em;
 }
-.num{
+
+.num {
     /* border: 2px solid magenta; */
     color: #8F969F;
     font-size: 14px;
 }
 
 /* ------ Article ------ */
-.article_sect{
+.article_sect {
     background-color: #151B23;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px 40px;
 }
-.art{
+
+.art {
     /* border: 2px solid cyan; */
 }
-.art_left{
+
+.art_left {
     display: flex;
     flex-direction: column;
     gap: .3em;
 }
-.left_top .lt_container{
+
+.left_top .lt_container {
     display: flex;
     gap: 1em;
 }
-.lt_container .contained{
+
+.lt_container .contained {
     color: #8F969F;
     font-size: 13px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.contained a{
+.contained a {
     text-decoration: none;
     color: #8F969F;
 }
-.contained a:hover{
+
+.contained a:hover {
     text-decoration: underline;
     color: #4493F8;
 }
-.left_bottom a{
+
+.left_bottom a {
     color: #8F969F;
     text-decoration: none;
     font-size: 13px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-.left_bottom a:hover{
+
+.left_bottom a:hover {
     text-decoration: underline;
     color: #4493F8;
 }
-.art_right{
+
+.art_right {
     display: flex;
     align-items: center;
     gap: 3em;
 }
-.right_left{
+
+.right_left {
     display: flex;
     gap: .8em;
 }
-.right_left img{
+
+.right_left img {
     width: 18px;
     filter: grayscale(0) invert(1);
 }
-.right_left .YouTube{
+
+.right_left .YouTube {
     width: 28px;
 }
+
 .right_right {
     color: #8F969F;
     display: flex;
     align-items: center;
     gap: .5em;
 }
-.right_right:hover{
+
+.right_right:hover {
     color: #4493F8;
 }
-.fa-globe{
+
+.fa-globe {
     font-size: 25px;
     font-weight: 800;
 }
