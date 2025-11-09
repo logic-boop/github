@@ -173,7 +173,7 @@ style="background-image: url(./IMAGES/mercado-libre.png);" */
     .leftside .bars {
         display: block;
         border: none;
-        font-size: 25px;
+        font-size: 30px;
     }
 
     .middlelogo img {
@@ -192,43 +192,43 @@ style="background-image: url(./IMAGES/mercado-libre.png);" */
 
 @media(max-width:894px) {
     .leftside .bars {
-        font-size: 20px;
+        font-size: 25px;
     }
 
     .middlelogo img {
-        width: 30px;
+        width: 35px;
     }
 
     .rightside .signin {
-        font-size: 14px;
+        font-size: 17px;
     }
 }
 
 @media(max-width:626px) {
     .leftside .bars {
-        font-size: 18px;
+        font-size: 23px;
     }
 
     .middlelogo img {
-        width: 27px;
+        width: 32px;
     }
 
     .rightside .signin {
-        font-size: 13px;
+        font-size: 16px;
     }
 }
 
 @media(max-width:400px) {
     .leftside .bars {
-        font-size: 17px;
+        font-size: 19px;
     }
 
     .middlelogo img {
-        width: 26px;
+        width: 29px;
     }
 
     .rightside .signin {
-        font-size: 12px;
+        font-size: 13px;
     }
 }
 
@@ -335,7 +335,7 @@ style="background-image: url(./IMAGES/mercado-libre.png);" */
 /* ------ Hero section ------ */
 .herosect {
     border: 2px solid red;
-    height: 180.5vh;
+    height: 200vh;
     background-image: linear-gradient(180deg, #070941, #051a46, #416A99);
     border: none;
 }
@@ -426,216 +426,10 @@ style="background-image: url(./IMAGES/mercado-libre.png);" */
 }
 
 .vide video {
-    width: 1000px;
+    width: 1100px;
 }
 
 /* --- media query for herosection --- */
-@media(max-width:1355px) {
-    .vid video {
-        width: 1000px;
-    }
-}
-
-@media(max-width:1347px) {
-    .vid video {
-        width: 700px;
-    }
-
-    .herosect .vid {
-        display: none;
-    }
-
-    .text h1 {
-        font-size: 65px;
-    }
-
-    .herosect {
-        height: 80vh;
-    }
-}
-
-@media(max-width:687px) {
-    .herocontainer .box {
-        flex-wrap: wrap;
-    }
-
-    .herosect {
-        height: 100vh;
-    }
-}
-
-@media(max-width:579px) {
-    .text h1 {
-        font-size: 45px;
-    }
-
-    .text p {
-        font-size: 16px;
-    }
-
-    .herosect {
-        height: 70vh;
-    }
-}
-
-@media(max-width:515px) {
-    .text h1 {
-        font-size: 40px;
-    }
-
-    .text p {
-        font-size: 14px;
-    }
-}
-
-@media(max-width:508px) {
-    .text h1 {
-        font-size: 39px;
-    }
-
-    .text p {
-        font-size: 14px;
-    }
-}
-
-@media(max-width:496px) {
-    .text h1 {
-        font-size: 35px;
-    }
-
-    .text p {
-        font-size: 12px;
-    }
-}
-
-@media(max-width:479px) {
-    .input button {
-        width: 445px;
-    }
-}
-
-@media(max-width:474px) {
-    .input {
-        width: 395px;
-    }
-
-    .input button {
-        width: 390px;
-    }
-
-    .box a {
-        width: 395px;
-    }
-}
-
-@media(max-width:448px) {
-    .herosect {
-        height: 99vh;
-    }
-}
-
-@media(max-width:445px) {
-    .text h1 {
-        font-size: 40px;
-    }
-}
-
-@media(max-width:424px) {
-    .herosect {
-        height: 105vh;
-    }
-
-    .text h1 {
-        font-size: 38px;
-    }
-
-    .input {
-        width: 360px;
-    }
-
-    .input button {
-        width: 355px;
-    }
-
-    .box a {
-        width: 360px;
-    }
-}
-
-@media(max-width:403px) {
-    .text h1 {
-        font-size: 40px;
-    }
-
-    .text p {
-        font-size: 9px;
-    }
-
-    .input {
-        width: 330px;
-    }
-
-    .input button {
-        width: 325px;
-    }
-
-    .box a {
-        width: 330px;
-    }
-}
-
-@media(max-width:375px) {
-    .text h1 {
-        font-size: 35px;
-    }
-
-    .text p {
-        font-size: 11px;
-    }
-
-    .input {
-        width: 310px;
-    }
-
-    .input button {
-        width: 305px;
-    }
-
-    .box a {
-        width: 310px;
-    }
-}
-
-@media(max-width:373px) {
-    .text h1 {
-        font-size: 32px;
-    }
-}
-
-@media(max-width:343px) {
-    .text h1 {
-        font-size: 29px;
-    }
-
-    .text p {
-        font-size: 10px;
-    }
-
-    .input {
-        width: 280px;
-    }
-
-    .input button {
-        width: 275px;
-    }
-
-    .box a {
-        width: 280px;
-    }
-}
-
-
-
 
 
 
