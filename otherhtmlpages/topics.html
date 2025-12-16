@@ -247,7 +247,7 @@
 
             <!-- ------ media query middle logo ------ -->
             <div class="middlelogo">
-                <img src="./IMAGES/logo2.png" alt="">
+                <img src="../IMAGES/logo2.png" alt="">
             </div>
 
             <!-- ------ The Right side ------ -->
@@ -309,33 +309,28 @@
     <!-- ------ Section One ------ -->
     <section>
         <div class="sect_one">
-            <div class="box box1">
-                <img src="../IMAGES/Topics on GitHub · GitHub/soneleft.png" alt="">
-                <h3>
-                    <a href="">CSS</a>
-                </h3>
+            <div class="box fade-in">
+                <img src="../IMAGES/Topics on GitHub · GitHub/soneleft.png" alt="CSS">
+                <h3><a href="#">CSS</a></h3>
                 <p>
-                    Cascading Style Sheets (CSS) is a <br>language used most often to style <br>and improve upon the
-                    appearance
-                    <br>of views.
+                    Cascading Style Sheets (CSS) is a language used most often to style and improve upon the appearance
+                    of views.
                 </p>
             </div>
-            <div class="box box2">
-                <img src="../IMAGES/Topics on GitHub · GitHub/sonecenter.png" alt="">
-                <h3>
-                    <a href="">npm</a>
-                </h3>
+
+            <div class="box fade-in">
+                <img src="../IMAGES/Topics on GitHub · GitHub/sonecenter.png" alt="npm">
+                <h3><a href="#">npm</a></h3>
                 <p>
-                    npm is a package manager for <br>JavaScript included with Node.js.
+                    npm is a package manager for JavaScript included with Node.js.
                 </p>
             </div>
-            <div class="box box3">
-                <img src="../IMAGES/Topics on GitHub · GitHub/soneright.png" alt="">
-                <h3>
-                    <a href="">Node.js</a>
-                </h3>
+
+            <div class="box fade-in">
+                <img src="../IMAGES/Topics on GitHub · GitHub/soneright.png" alt="Node.js">
+                <h3><a href="#">Node.js</a></h3>
                 <p>
-                    Node.js is a tool for executing <br>JavaScript in a variety of <br>environments.
+                    Node.js is a tool for executing JavaScript in a variety of environments.
                 </p>
             </div>
         </div>
@@ -677,6 +672,134 @@
         </div>
     </article>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop" title="Go to top">↑</button>
+
+
 </body>
+
+<script>
+    const bars = document.querySelector('.bars i');
+    const menuContainer = document.querySelector('.menucontainer');
+    const submenuToggle = document.querySelector('.submenu-toggle');
+    const submenu = document.querySelector('.container1');
+    const arrow = document.querySelector('.arrow');
+
+    bars.addEventListener('click', () => {
+        menuContainer.classList.toggle('mobile-active');
+
+        // toggle bars to X-mark
+        if (bars.classList.contains('fa-bars')) {
+            bars.classList.remove('fa-bars');
+            bars.classList.add('fa-xmark');
+        } else {
+            bars.classList.remove('fa-xmark');
+            bars.classList.add('fa-bars');
+        }
+    });
+
+    // Platform submenu toggle
+    submenuToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        submenu.classList.toggle('active');
+        arrow.classList.toggle('rotated');
+    });
+
+
+    // for subheader
+    document.addEventListener("DOMContentLoaded", () => {
+        const tabs = document.querySelectorAll(".sub .subs");
+
+        tabs.forEach(tab => {
+            tab.addEventListener("click", (e) => {
+                e.preventDefault();
+
+                // Remove active class from all
+                tabs.forEach(t => t.classList.remove("active"));
+
+                // Add active to clicked tab
+                tab.classList.add("active");
+            });
+        });
+    });
+
+    // for fade in fade out
+    document.addEventListener("DOMContentLoaded", () => {
+        const fadeElements = document.querySelectorAll(".fade-in");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target); // Animate once
+                    }
+                });
+            },
+            {
+                threshold: 0.1,
+            }
+        );
+
+        fadeElements.forEach((el) => observer.observe(el));
+    });
+
+
+    //fade out scroll out
+    document.addEventListener("DOMContentLoaded", () => {
+        const fadeElements = document.querySelectorAll(".fade-in");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        fadeElements.forEach((el) => observer.observe(el));
+    });
+
+    //back to top button
+    // Get the button
+    const backToTopBtn = document.getElementById("backToTop");
+
+    // Show/hide button on scroll
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add("show");
+        } else {
+            backToTopBtn.classList.remove("show");
+        }
+    });
+
+    // Smooth scroll to top on click
+    backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+
+    const fadeElements = document.querySelectorAll('.fade-in');
+
+    const fadeInOnScroll = () => {
+        const triggerBottom = window.innerHeight * 0.85;
+
+        fadeElements.forEach(el => {
+            const elTop = el.getBoundingClientRect().top;
+
+            if (elTop < triggerBottom) {
+                el.classList.add('visible');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', fadeInOnScroll);
+    window.addEventListener('load', fadeInOnScroll);
+
+</script>
 
 </html>

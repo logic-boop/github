@@ -247,7 +247,7 @@
 
             <!-- ------ media query middle logo ------ -->
             <div class="middlelogo">
-                <img src="./IMAGES/logo2.png" alt="">
+                <img src="../IMAGES/logo2.png" alt="">
             </div>
 
             <!-- ------ The Right side ------ -->
@@ -288,6 +288,11 @@
             <img class="pic p1" src="../IMAGES/Marketplace  · GitHub/p1.png" alt="">
             <img class="pic p2" src="../IMAGES/Marketplace  · GitHub/p2.png" alt="">
             <img class="pic p3" src="../IMAGES/Marketplace  · GitHub/p3.png" alt="">
+        </div>
+
+        <!-- Back to top arrow -->
+        <div class="back-to-top" id="backToTop">
+            <i class="fa fa-arrow-up"></i>
         </div>
     </section>
 
@@ -818,7 +823,7 @@
 
     <!-- ------ Footer ------ -->
     <section>
-        <div class="sect_eleven">
+        <div class="footer">
             <div class="col col_1">
                 <div class="logotext">
                     <img src="../IMAGES/logo2.png" alt="">
@@ -1004,13 +1009,13 @@
 
             <div class="art art_right">
                 <div class="right_left">
-                    <img src="../IMAGES/linkedin.png" alt="">
-                    <img src="../IMAGES/Instagram.png" alt="">
-                    <img class="YouTube" src="../IMAGES/YouTube.png" alt="">
-                    <img src="../IMAGES/x.png" alt="">
-                    <img src="../IMAGES/tiktok.png" alt="">
-                    <img src="../IMAGES/twitch.png" alt="">
-                    <img src="../IMAGES/github.png" alt="">
+                    <img src="./IMAGES/linkedin.png" alt="">
+                    <img src="./IMAGES/Instagram.png" alt="">
+                    <img class="YouTube" src="./IMAGES/YouTube.png" alt="">
+                    <img src="./IMAGES/x.png" alt="">
+                    <img src="./IMAGES/tiktok.png" alt="">
+                    <img src="./IMAGES/twitch.png" alt="">
+                    <img src="./IMAGES/github.png" alt="">
                 </div>
                 <div class="right_right">
                     <i class="fa-light fa-globe"></i>
@@ -1020,6 +1025,52 @@
             </div>
         </div>
     </article>
+
 </body>
+
+<script>
+    // BACK TO TOP BUTTON
+    const backToTop = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTop.classList.add('show');
+        } else {
+            backToTop.classList.remove('show');
+        }
+    });
+
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    const bars = document.querySelector('.bars i');
+    const menuContainer = document.querySelector('.menucontainer');
+    const submenuToggle = document.querySelector('.submenu-toggle');
+    const submenu = document.querySelector('.container1');
+    const arrow = document.querySelector('.arrow');
+
+    bars.addEventListener('click', () => {
+        menuContainer.classList.toggle('mobile-active');
+
+        // toggle bars to X-mark
+        if (bars.classList.contains('fa-bars')) {
+            bars.classList.remove('fa-bars');
+            bars.classList.add('fa-xmark');
+        } else {
+            bars.classList.remove('fa-xmark');
+            bars.classList.add('fa-bars');
+        }
+    });
+
+    // Platform submenu toggle
+    submenuToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        submenu.classList.toggle('active');
+        arrow.classList.toggle('rotated');
+    });
+
+
+</script>
 
 </html>
